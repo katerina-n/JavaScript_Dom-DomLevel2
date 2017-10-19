@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>modul</title>
+</head>
+<body>
+<div style="border: solid; border-color: black; width: 330px; height: 250px;">
+<form id="forma">
+    <div style="position: absolute; left: 50px">
+        <input type="text" id="number"  style="height: 35px; width: 245px">
+    </div>
+</form>
+<div >
+    <div style="display: inline-block; position: absolute; left: 50px; top: 10%">
+        <button class="add" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;" onclick="equal('+', document.getElementById('number').value)"><p style="font-size:140%">+</p></button></div>
+
+    <div style="display: inline-block;position: absolute; left: 100px; top: 10%">
+        <button class="add" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;" onclick="equal('-', document.getElementById('number').value)"><p style="font-size:140%">-</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 150px; top: 10%">
+        <button class="add" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;" onclick="equal('*', document.getElementById('number').value)"><p style="font-size:140%">*</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 200px; top: 10%">
+        <button class="add" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;" onclick="equal('/', document.getElementById('number').value)"><p style="font-size:140%">/</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 250px; top: 10%">
+        <button class="add" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;" onclick="equally(document.getElementById('number').value)"><p style="font-size:140%">=</p></button></div>
+</div>
+<div >
+    <div class="add" style="display: inline-block; position: absolute; left: 50px; top: 20%">
+        <button name="6" style="background-color: grey; border: 1px solid; width: 50px; height: 50px; "onclick="equal(6, document.getElementById('number').value)"><p style="font-size:140%">6</p></button></div>
+
+    <div style="display: inline-block;position: absolute; left: 100px; top: 20%">
+        <button name="7" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(7, document.getElementById('number').value)"><p style="font-size:140%">7</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 150px; top: 20%">
+        <button name="8" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(8, document.getElementById('number').value)"><p style="font-size:140%">8</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 200px; top: 20%">
+        <button name="9" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(9, document.getElementById('number').value)"><p style="font-size:140%">9</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 250px; top: 20%">
+        <button name="0" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;" onclick="equal(0, document.getElementById('number').value)"><p style="font-size:140%">0</p></button></div>
+</div>
+
+<div >
+    <div style="display: inline-block; position: absolute; left: 50px; top: 30%">
+        <button name="1" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(1, document.getElementById('number').value)"><p style="font-size:140%">1</p></button></div>
+
+    <div style="display: inline-block;position: absolute; left: 100px; top: 30%">
+        <button name="2" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(2, document.getElementById('number').value)"><p style="font-size:140%">2</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 150px; top: 30%">
+        <button name="3" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(3, document.getElementById('number').value)"><p style="font-size:140%">3</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 200px; top: 30%">
+        <button name="4" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(4, document.getElementById('number').value)"><p style="font-size:140%">4</p></button></div>
+    <div style="display: inline-block;position: absolute; left: 250px; top: 30%">
+        <button name="5" style="background-color: grey; border: 1px solid; width: 50px; height: 50px;"onclick="equal(5, document.getElementById('number').value)"><p style="font-size:140%">5</p></button></div>
+</div>
+<div>
+
+    <div style="display: inline-block;position: absolute; left: 50px; top: 40%">
+        <button class="c" style="background-color: grey; border: 1px solid; width: 250px; height: 50px;"onclick="resset()">C</button></div>
+</div>
+
+</div>
+
+
+
+<script>
+    function getelement(tagname){
+        var a=document.getElementsByClassName(tagname);
+       for(var i=0; i<=a.length-1; i++){
+           var stroka=(String)(a[i]);
+           var ind1=stroka.lastIndexOf("HTML")+"<br>";
+         //  var ind2=stroka.lastIndexOf("Element")+"<br>";
+          var index1=parseInt(ind1)+4;
+          var index2="Element".length;
+           var script=stroka.substr(index1, stroka.length-index2-index1-1);
+           var script=script.toLowerCase();
+document.write('&lt'+script+'&gt'+"<br>");
+        }
+
+    }
+
+getelement('c');
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text</title>
+</head>
+<body>
+<button id='butom'>TOUCH</button>
+</body>
+<script>
+    document.getElementById("butom").onclick=function(){
+        var mass=document.getElementsByTagName('p');
+        var i=mass.length;
+        if(+i+1==11){
+            while(mass.length>0) {
+                document.body.lastChild.remove();
+            }
+            return;
+        }
+        var cow=document.createElement('p');
+       // cow.innerHTML=+i+1 + " sheep";
+        cow.innerHTML="<img src='ovca.png' style='height: 100px; width: 140px'>";
+        document.body.appendChild(cow);
+    }
+
+    </script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div</title>
+</head>
+<body>
+w-up; x-down; d-right; a-left; s-height;
+<div id="box" style="width:5%; height: 8%; background-color: black; position:absolute; left:2px" tabindex="10">
+</div>
+<script>
+
+    document.getElementById("box").onkeypress=function(event){
+        if(event.keyCode==100){
+            var a=document.getElementById('box').offsetLeft;
+            a=a+20;
+            document.getElementById('box').style.left=a+"px";
+           // document.write(box.getAttribute('style'));
+        }
+        if(event.keyCode==120){
+            var a=document.getElementById('box').offsetTop;
+            a=a+20;
+            document.getElementById('box').style.top=a+"px";
+            // document.write(box.getAttribute('style'));
+        }
+        if(event.keyCode==97){
+            var a=document.getElementById('box').offsetLeft;
+            a=a-20;
+            document.getElementById('box').style.left=a+"px";
+            // document.write(box.getAttribute('style'));
+        }
+        if(event.keyCode==119){
+            var a=document.getElementById('box').offsetTop;
+            a=a-20;
+            document.getElementById('box').style.top=a+"px";
+            // document.write(box.getAttribute('style'));
+        }
+        if(event.keyCode==115){
+            var a=document.getElementById('box').offsetHeight;
+            a=a+5;
+            document.getElementById('box').style.height=a+"px";
+            // document.write(box.getAttribute('style'));
+        }
+    }
+    </script>
+</body>
+</html>
